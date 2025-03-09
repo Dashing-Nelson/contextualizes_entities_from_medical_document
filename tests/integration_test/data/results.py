@@ -37,21 +37,6 @@ result_for_entity = [
         "start": 248,
     },
     {
-        "context": ", disrupted\n"
-        "sleep, myalgias and arthralgias, post-exertional malaise, ortho",
-        "end": 272,
-        "entity": "arthralgias",
-        "start": 261,
-    },
-    {
-        "context": "nd arthralgias, post-exertional malaise, orthostatic "
-        "intolerance\n"
-        "and ot",
-        "end": 297,
-        "entity": "malaise",
-        "start": 290,
-    },
-    {
         "context": "lgias, post-exertional malaise, orthostatic intolerance\n"
         "and other symptoms that greatly",
         "end": 322,
@@ -60,7 +45,7 @@ result_for_entity = [
     },
     {
         "context": "ly interfere with their ability to function and that\n"
-        "can leave som.",
+        "can leave som. open ac",
         "end": 395,
         "entity": "to function",
         "start": 384,

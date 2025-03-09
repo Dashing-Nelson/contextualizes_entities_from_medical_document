@@ -44,8 +44,8 @@ def test_extract_entities_non_medical():
 def test_extract_entities_medical(mock_extract_entities_cached):
     text = "John Doe has Covid-19 and is coughing."
     mock_extract_entities_cached.return_value = [
-        {"word": "Covid-19", "start": 0, "end": 8, "entity_group": "Disease_disorder"},
-        {"word": "Google", "start": 34, "end": 40, "entity_group": "other"},
+        {"word": "Covid-19", "start": 0, "end": 8, "entity_group": "Disease_disorder", "score": 100},
+        {"word": "Google", "start": 34, "end": 40, "entity_group": "other", "score": 100},
     ]
 
     entities = extract_entities(text)

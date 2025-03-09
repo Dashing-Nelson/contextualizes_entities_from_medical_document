@@ -1,6 +1,7 @@
 # Project Setup Guide
 
-This guide provides instructions on how to set up the project for local development and production.
+This guide provides instructions on how to set up the project for local development and production. Design Decision
+can be found in `Documentation` folder.
 
 ## Prerequisites
 
@@ -107,6 +108,10 @@ The table below lists all environment variables, their descriptions, and whether
 
 ---
 
+## Model configuration
+
+To modify model configuration (such as min accuracy in percentage), please modify it in `config.py`.
+
 ## **📌 Example `.env` File**
 To set up the environment variables locally, create a `.env` file with the following content:
 
@@ -119,6 +124,7 @@ HUGGING_FACE_MODEL_PATH=d4data/biomedical-ner-all
 HUGGING_FACE_TASK=ner
 HUGGING_FACE_AGGREGATION_STRATEGY=simple
 HUGGING_FACE_DEVICE=cpu
+HTTP_PORT=8000
 ```
 
 ## Run tests using Poetry:

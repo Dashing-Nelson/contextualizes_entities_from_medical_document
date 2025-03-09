@@ -2,6 +2,7 @@ from functools import lru_cache
 
 from app.util.config import (
     KEEP_LABELS,
+    MIN_MODEL_ACCURACY,
     huggingface_aggregation_strategy,
     huggingface_device,
     huggingface_model,
@@ -48,10 +49,11 @@ def extract_entities(text: str):
         entities = []
         # Iterate through each entity result.
         for entity in ner_results:
+            score = entity.get("score", 0.0)
             label = entity.get("entity_group", None)
             start = entity["start"]
             end = entity["end"]
-            if label in KEEP_LABELS:
+            if label in KEEP_LABELS and score >= MIN_MODEL_ACCURACY:
                 # Retrieve a snippet of context around the entity.
                 context_snippet = get_context(text, start, end)
                 # Append the entity data to the list.

@@ -230,3 +230,5 @@ KEEP_LABELS = {
     "Medication",
     "Diagnostic_procedure",
 }
+
+MIN_MODEL_ACCURACY = 0.6  # 60%

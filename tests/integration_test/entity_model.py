@@ -16,7 +16,7 @@ def test_extract_entities_filters_unwanted_labels():
         "Some patients remain unwell for months after “recovering” from acute COVID-\n19. They develop persistent "
         "fatigue, cognitive problems, headaches, disrupted\nsleep, myalgias and arthralgias, post-exertional "
         "malaise, orthostatic intolerance\nand other symptoms that greatly interfere with their ability to "
-        "function and that\ncan leave som."
+        "function and that\ncan leave som. open access June 5, 2023"
     )
 
     results = extract_entities(text)

@@ -5,7 +5,7 @@ from pythonjsonlogger.json import JsonFormatter
 # Configure Logger
 logger = logging.getLogger("app-logger")
 
-# Prevent adding multiple handlers (important when importing across files)
+# Prevent adding multiple handlers
 if not logger.handlers:
     log_handler = logging.StreamHandler()
 
@@ -16,11 +16,6 @@ if not logger.handlers:
 
     log_handler.setFormatter(formatter)
     logger.addHandler(log_handler)
-
-    # Optional: Write logs to a file
-    file_handler = logging.FileHandler("app.log")
-    file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
 
 
 def set_log_level(level):
